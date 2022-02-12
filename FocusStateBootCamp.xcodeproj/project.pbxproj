@@ -19,6 +19,8 @@
 		75F5C46127B82AAD00A897E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F5C46327B82AAD00A897E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F5C46627B82AAD00A897E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75F5C46D27B82C4C00A897E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		75F5C46F27B851FE00A897E7 /* design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = design.png; path = ../../../../../../var/folders/7r/xnrs1x7d647dtd0v8m2y6bm80000gn/T/TemporaryItems/NSIRD_screencaptureui_LTugXD/design.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,8 @@
 		75F5C45327B82AAD00A897E7 = {
 			isa = PBXGroup;
 			children = (
+				75F5C46D27B82C4C00A897E7 /* README.md */,
+				75F5C46E27B851DF00A897E7 /* img */,
 				75F5C45E27B82AAD00A897E7 /* FocusStateBootCamp */,
 				75F5C45D27B82AAD00A897E7 /* Products */,
 			);
@@ -65,6 +69,14 @@
 				75F5C46627B82AAD00A897E7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		75F5C46E27B851DF00A897E7 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				75F5C46F27B851FE00A897E7 /* design.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
