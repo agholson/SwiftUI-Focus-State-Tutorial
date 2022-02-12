@@ -14,7 +14,7 @@ The `FocusState` paramater allows us to programmatically activate a `TextField` 
   - [Multiple Text Fields](#multiple-text-fields)
 
 # Design
-[Shows the app's appearance](img/design.png)
+![Shows the app's appearance](img/design.png)
 
 # Code
 Setup code:
