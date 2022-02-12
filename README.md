@@ -10,6 +10,7 @@ The `FocusState` paramater allows us to programmatically activate a `TextField` 
 - [Design](#design)
 - [Code](#code)
   - [Make TextField Selected at Launch](#make-textfield-selected-at-launch)
+  - [Validate TextField Data](#validate-textfield-data)
   - [Multiple Text Fields](#multiple-text-fields)
 
 # Design
@@ -55,6 +56,36 @@ VStack {...}
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
         usernameInFocus.toggle()
     }
+}
+```
+
+## Validate TextField Data
+You can also check to make sure that the text fields contain values through the following code:
+```
+Button("Sign up 🚀") {
+    // Declare variables to track if the username and password have values
+    let usernameIsValid = !username.isEmpty // if the username is not empty
+    let passwordIsValid = !password.isEmpty // if password is not empty
+    
+    // Make sure both are valid
+    if usernameIsValid && passwordIsValid {
+        print("User signed up!")
+    }
+    else if usernameIsValid {
+        // Else if only the username is valid, then make the password in focus
+//                    usernameInFocus = false
+//                    passwordInFocus = true
+        fieldInFocus = .password
+    
+    }
+    // Else the user did not even fill out any fields
+    else {
+//                    usernameInFocus = true
+//                    passwordInFocus = false
+        // Make username field in focus
+        fieldInFocus = .username
+    }
+
 }
 ```
 
