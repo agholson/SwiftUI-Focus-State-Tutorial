@@ -1,5 +1,5 @@
 #  Focus State Tutorial
-This project explains how to use the `FocusState` iOS 15 parameter. It is based on SwiftFul Thinking's, Nick Sarno's excellent 
+This project explains how to use the SwiftUI `FocusState` iOS 15 parameter. It is based on SwiftFul Thinking's, Nick Sarno's excellent 
 iOS Boot Camp tutorial
 [How to use @FocusState in SwiftUI | Bootcamp #60](https://www.youtube.com/watch?v=9OC8e0OULBg). The `.focused` parameter can be used
 to pop a user right back up to fill in a field he or she perhaps forgot to fill in as part of a form.
