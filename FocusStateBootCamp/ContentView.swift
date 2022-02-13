@@ -28,13 +28,15 @@ struct ContentView: View {
     // Tracks the field in focus
     @FocusState private var fieldInFocus: OnboardingField?  // Optional, by default, no field is in focus
     
+    @State var showPassword = false
+    
     var body: some View {
         VStack(spacing: 30) {
             
             // MARK: - Username Field
             TextField("Add your name here...", text: $username)
                 .focused($fieldInFocus, equals: .username)
-//                .focused($usernameInFocus)
+            //                .focused($usernameInFocus)
                 .padding(.leading) // Pushes text inwards towards center
                 .frame(height: 55)
                 .frame(maxWidth: .infinity)
@@ -42,20 +44,47 @@ struct ContentView: View {
                 .cornerRadius(10)
                 .onSubmit {
                     // On submit, make the password show up
-                    usernameInFocus = false
-                    passwordInFocus = true
+                    fieldInFocus = .password
                 }
             
             // MARK: - Password Field
             
-            SecureField("Choose a password...", text: $password)
-                .focused($fieldInFocus, equals: .password)
-//                .focused($passwordInFocus)
-                .padding(.leading) // Pushes text inwards towards center
-                .frame(height: 55)
-                .frame(maxWidth: .infinity)
-                .background(Color.gray.brightness(0.3))
-                .cornerRadius(10)
+            HStack {
+                // Makes password appear as plaintext
+                if showPassword {
+                    TextField("Choose a password...", text: $password)
+                        .focused($fieldInFocus, equals: .password)
+                }
+                // Else make the password text be hidden
+                else {
+                    SecureField("Choose a password...", text: $password)
+                        .focused($fieldInFocus, equals: .password)
+                    //                .focused($passwordInFocus)
+                }
+                
+                Button {
+                    // Flip the switch on
+                    showPassword.toggle()
+                    fieldInFocus = .password
+                    
+                } label: {
+                    if showPassword {
+                        Image(systemName: "eye.slash")
+                            .foregroundColor(Color.gray)
+                    }
+                    else {
+                        Image(systemName: "eye")
+                            .foregroundColor(Color.gray)
+                    }
+                }
+                
+                //
+            }
+            .padding(.horizontal) // Pushes text inwards towards center
+            .frame(height: 55)
+            .frame(maxWidth: .infinity)
+            .background(Color.gray.brightness(0.3))
+            .cornerRadius(10)
             
             // MARK: Sign up Button
             Button("Sign up 🚀") {
@@ -69,24 +98,24 @@ struct ContentView: View {
                 }
                 else if usernameIsValid {
                     // Else if only the username is valid, then make the password in focus
-//                    usernameInFocus = false
-//                    passwordInFocus = true
+                    //                    usernameInFocus = false
+                    //                    passwordInFocus = true
                     fieldInFocus = .password
-                
+                    
                 }
                 // Else the user did not even fill out any fields
                 else {
-//                    usernameInFocus = true
-//                    passwordInFocus = false
+                    //                    usernameInFocus = true
+                    //                    passwordInFocus = false
                     // Make username field in focus
                     fieldInFocus = .username
                 }
-
+                
             }
             
-//            Button("TOGGLE IN FOCUS STATE") {
-//                usernameInFocus.toggle()
-//            }
+            //            Button("TOGGLE IN FOCUS STATE") {
+            //                usernameInFocus.toggle()
+            //            }
             
         }
         .padding(40)

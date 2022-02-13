@@ -14,13 +14,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75C367C227B89CD300E1479F /* design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design.png; sourceTree = "<group>"; };
 		75F5C45C27B82AAD00A897E7 /* FocusStateBootCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusStateBootCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F5C45F27B82AAD00A897E7 /* FocusStateBootCampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateBootCampApp.swift; sourceTree = "<group>"; };
 		75F5C46127B82AAD00A897E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F5C46327B82AAD00A897E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F5C46627B82AAD00A897E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75F5C46D27B82C4C00A897E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		75F5C47127B855BA00A897E7 /* design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 		75F5C46E27B851DF00A897E7 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				75F5C47127B855BA00A897E7 /* design.png */,
+				75C367C227B89CD300E1479F /* design.png */,
 			);
 			path = img;
 			sourceTree = "<group>";
